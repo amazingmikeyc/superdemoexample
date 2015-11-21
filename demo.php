@@ -1,5 +1,9 @@
 <?php
 
+// ---   Some code which loads in the MySQL connection
+// --- maybe in a fairly sensible way...
+
+
 $password = $_POST['password'];
 $username = $_POST['username'];
 
@@ -12,6 +16,8 @@ if (!$results) {
     echo "that is not the password";
 } else {
     include("log-me-in.php");
+    
+    doNextThing($username);
 }
 
 ?>
